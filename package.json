@@ -1,0 +1,11 @@
+{
+  "name": "origami-start",
+  "type": "module",
+  "dependencies": {
+    "@weborigami/origami": "0.2.2"
+  },
+  "scripts": {
+    "build": "ori 'copy static(all.ori), clear files:build'",
+    "start": "ori serve watch src, =debug all.ori"
+  }
+}

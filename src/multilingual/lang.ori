@@ -1,0 +1,9 @@
+// Given a collection of (language, text), produce some HTML that would
+// appropriate for that text in that language. For now this just adds a CSS
+// class.
+
+(texts) => map(texts, (text, language) => indent`
+  <div class="lang-${language}">
+    ${ mdHtml(text) }
+  </div>
+`)

@@ -1,0 +1,5 @@
+// Inline any expressions in ${ } substitutions
+map(markdown, inline)
+
+// Transform markdown to HTML
+→ =map(_, mdHtml)
