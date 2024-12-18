@@ -1,9 +1,13 @@
 // Given a collection of (language, text), produce some HTML that would
-// appropriate for that text in that language. For now this just adds a CSS
-// class.
+// appropriate for that text in that language. Here is sets the `lang` attribute
+// on a section element.
+//
+// Note that, because this outputs HTML, subsequent markdown processing will
+// leave the HTML text alone. For that reason, this function explicitly invokes
+// `mdHtml` on the supplied text to transform any markdown formatting into HTML.
 
 (texts) => map(texts, (text, language) => indent`
-  <div class="lang-${language}">
+  <section lang="${language}">
     ${ mdHtml(text) }
-  </div>
+  </section>
 `)
