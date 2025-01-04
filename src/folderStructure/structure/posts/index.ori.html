@@ -9,7 +9,7 @@
     <ul>
       ${ map(markdown, (post, key) => indent`
       <li>
-        <a href="/posts/${ key/replace('.md', '.html') }">${ post/title }</a>
+        <a href="./${ key/replace('.md', '.html') }">${ post/title }</a>
       </li>
       `) }
     </ul>
