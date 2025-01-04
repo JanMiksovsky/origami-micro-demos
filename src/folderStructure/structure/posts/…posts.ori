@@ -1,0 +1,7 @@
+map(markdown, {
+  extension: ".md->.html"
+  value: (post) => indent`
+    <h1>${ post/title }</h1>
+    <article>${ post/@text }</article>
+  `
+})

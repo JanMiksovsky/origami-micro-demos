@@ -1,0 +1,9 @@
+// Merge in spreads
+mergeSpreads.js(structure)
+
+// Process all X.ori.html templates to create X.html
+→ =deepMap(_, {
+  // extension: ".ori.html->.html"
+  key: (value, key) => key/endsWith(".ori.html") ? key/replace(".ori.html", ".html") : key
+  value: (value, key) => key/endsWith(".ori.html") ? value/() : value
+})
